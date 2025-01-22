@@ -35,7 +35,11 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Text.Exps.Y,
 		C3.Plugins.NinePatch.Acts.SetSize,
 		C3.Plugins.Text.Exps.Width,
-		C3.Plugins.Text.Exps.Height
+		C3.Plugins.Text.Exps.Height,
+		C3.Plugins.Touch.Cnds.OnDoubleTapGesture,
+		C3.Plugins.Browser.Cnds.IsFullscreen,
+		C3.Plugins.System.Cnds.Else,
+		C3.Plugins.Browser.Acts.CancelFullScreen
 	];
 };
 self.C3_JsPropNameTable = [
