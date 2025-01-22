@@ -1405,7 +1405,7 @@ self.C3_ExpressionFuncs = [
 			const n2 = p._GetNode(2);
 			const v3 = p._GetNode(3).GetVar();
 			const v4 = p._GetNode(4).GetVar();
-			return () => C3.lerp(n0.ExpObject(), C3.clamp((f1() - n2.ExpObject()), v3.GetValue(), v4.GetValue()), 0.12);
+			return () => C3.lerp(n0.ExpObject(), C3.clamp((f1() - n2.ExpObject()), v3.GetValue(), v4.GetValue()), 0.17);
 		},
 		p => {
 			const n0 = p._GetNode(0);
