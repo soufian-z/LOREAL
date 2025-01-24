@@ -5,6 +5,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Touch,
 		C3.Plugins.Sprite,
 		C3.Behaviors.Tween,
+		C3.Behaviors.Timer,
 		C3.Plugins.Text,
 		C3.Plugins.NinePatch,
 		C3.Plugins.Browser,
@@ -13,6 +14,10 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.TiledBg.Acts.SetWidth,
 		C3.Plugins.System.Exps.layoutwidth,
 		C3.Plugins.Browser.Acts.RequestFullScreen,
+		C3.Plugins.Text.Acts.SetText,
+		C3.Plugins.System.Exps.projectversion,
+		C3.Plugins.System.Acts.Wait,
+		C3.Plugins.Text.Acts.SetOpacity,
 		C3.Plugins.System.Acts.SetVar,
 		C3.Plugins.Sprite.Acts.SetHeight,
 		C3.Plugins.TiledBg.Exps.Height,
@@ -23,12 +28,17 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Cnds.EveryTick,
 		C3.Plugins.Sprite.Acts.SetPos,
 		C3.Plugins.TiledBg.Exps.Y,
+		C3.Plugins.Touch.Cnds.OnTapGesture,
+		C3.Plugins.System.Cnds.ForEach,
+		C3.Plugins.Text.Cnds.CompareOpacity,
+		C3.Behaviors.Tween.Cnds.IsPlaying,
+		C3.Plugins.Sprite.Cnds.PickChildren,
+		C3.Behaviors.Timer.Acts.StopTimer,
+		C3.Plugins.Sprite.Exps.UID,
 		C3.Plugins.Touch.Cnds.OnTapGestureObject,
 		C3.Plugins.Sprite.Cnds.CompareOpacity,
-		C3.Plugins.Sprite.Cnds.PickChildren,
-		C3.Plugins.System.Acts.Wait,
+		C3.Behaviors.Timer.Acts.StartTimer,
 		C3.Plugins.System.Cnds.IsGroupActive,
-		C3.Plugins.System.Cnds.ForEach,
 		C3.Plugins.Text.Cnds.PickChildren,
 		C3.Plugins.NinePatch.Acts.SetPos,
 		C3.Plugins.Text.Exps.X,
@@ -39,7 +49,9 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Touch.Cnds.OnDoubleTapGesture,
 		C3.Plugins.Browser.Cnds.IsFullscreen,
 		C3.Plugins.System.Cnds.Else,
-		C3.Plugins.Browser.Acts.CancelFullScreen
+		C3.Plugins.Browser.Acts.CancelFullScreen,
+		C3.Behaviors.Timer.Cnds.OnTimer,
+		C3.Plugins.Sprite.Cnds.IsOverlapping
 	];
 };
 self.C3_JsPropNameTable = [
@@ -48,6 +60,7 @@ self.C3_JsPropNameTable = [
 	{Touch: 0},
 	{separateur_sprite: 0},
 	{Tween: 0},
+	{Timer: 0},
 	{POI_sprite: 0},
 	{label_text: 0},
 	{bgLabel_9patch: 0},
@@ -55,6 +68,7 @@ self.C3_JsPropNameTable = [
 	{Icon: 0},
 	{Browser: 0},
 	{ref_poi_sprite: 0},
+	{version: 0},
 	{MAX_SWIPE: 0},
 	{MIN_SWIPE: 0}
 ];
@@ -70,5 +84,6 @@ self.InstanceType = {
 	transition_input_zone_sprite: class extends self.ISpriteInstance {},
 	Icon: class extends self.ISpriteInstance {},
 	Browser: class extends self.IInstance {},
-	ref_poi_sprite: class extends self.ISpriteInstance {}
+	ref_poi_sprite: class extends self.ISpriteInstance {},
+	version: class extends self.ITextInstance {}
 }
